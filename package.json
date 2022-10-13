@@ -1,0 +1,23 @@
+{
+  "name": "lesson14-butlermw",
+  "version": "1.0.0",
+  "description": "this will be used as a todo list/Brainstorm markdown until readme is started and completed (please ignore)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cs401-fall2022/lesson14-ButlerMW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cs401-fall2022/lesson14-ButlerMW/issues"
+  },
+  "homepage": "https://github.com/cs401-fall2022/lesson14-ButlerMW#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}

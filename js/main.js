@@ -1,5 +1,3 @@
-window.onload = loaded;
-
-function loaded() {
-  console.log("Hello World!")
-}
+"use strict";
+// Testing out functionality
+console.log("Hello World!!");

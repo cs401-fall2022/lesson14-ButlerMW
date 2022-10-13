@@ -1,5 +1,2 @@
-window.onload = loaded;
-
-function loaded() {
-  console.log("Hello World!");
-}
+// Testing out functionality
+console.log("Hello World!!");

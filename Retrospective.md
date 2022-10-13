@@ -29,4 +29,12 @@ TODO
 
 ## Sources used
 
-TODO
+https://www.w3schools.com/css/css_font.asp
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+
+https://stackoverflow.com/questions/2717127/gradient-borders
+
+https://stackoverflow.com/questions/6148032/how-to-make-a-font-thinner-on-web
+
+https://www.w3schools.com/tags/tag_span.asp

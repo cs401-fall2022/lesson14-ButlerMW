@@ -41,12 +41,39 @@
         <h2>What is TypeScript?</h2>
         <p>
           TypeScript is a free and open source programming language developed and maintained by Microsoft.
-          TypeScript is similar to JavaScript. 
+          TypeScript is similar to JavaScript, but contains more. TypeScript offers all of JavaScript's features, and 
+          additional layer of features from the TypeScript type system. Below we will learn more about TypeScript features 
+          and its relation to JavaScript.
         </p>
       </div>
       <div>
         <h2>Declaring Types</h2>
+        <p>
+          TypeScript will generate types in many cases that will be generate/translated to JavaScript. When creating a variable
+          and assinging that variable, TypeScript will used the value as its type:
+        </p>
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">let</span> 
+            <span style="color:#00E6C5">hello</span> 
+            <span style="color:#E95C42">=</span> 
+            <span style="color:#7EBB64">"Hello TypeScript World!"</span>;
+          </p>
+        </div>
+        <p>
+          TypeScript can build a type system that accepts JavaScript code but instead has types. This feature allows us to 
+          create typs without needing additional characters to make types explicit. In the example card above TypeScript knows
+          that <strong><span style="color:yellow">hello</span></strong> is a String type. 
+        </p>
         <h3>Objects</h3>
+        <p>
+          In JavaScript, you can use a wide variety of differnt design patterns. This, however, can make it difficult for types to be inferred automatically. 
+          To cover these cases, TypeScript contains an extension of the JavaScript language and this offers places for you to tell TypeScript what these types will be. 
+        </p>
+        <p>
+          In the example card below, creates an Object with an inferred type which includes <strong><span style="color:yellow">name</span></strong> as a String and
+          <strong><span style="color:yellow">id</span></strong> as an int 
+        </p>
         <div id="example-card">
             <p>
               <span style="color:#C24CE8">const</span> 
@@ -63,8 +90,50 @@
             <p>
               <span style="color:#2FA6CF">}</span>;
             </p>
-          <!-- </p> -->
         </div>
+
+        <p>
+          To explicitly describe this object's shape using an <strong><span style="color:yellow">Interface</span></strong> declaration like so:
+        </p>
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">interface</span> 
+            <span style="color:#00E6C5">User</span> 
+            <span style="color:#2FA6CF">{</span>
+          </p>
+          <p style="margin-left:45px">
+            name: <span style="color:#C24CE8">name</span> 
+          </p>
+          <p style="margin-left:45px">
+            id: <span style="color:#C24CE8">int</span> 
+          </p>
+          <p>
+            <span style="color:#2FA6CF">}</span>;
+          </p>
+      </div>
+
+      <p>
+        JavaScript objects conforms to the shape of your new <strong><span style="color:yellow">Interface</span></strong> by using syntax like 
+        <strong><span style="color:yellow">: TypeName</span></strong> after variable declaration:
+      </p>
+      <div id="example-card">
+        <p>
+          <span style="color:#C24CE8">const</span> 
+          <span style="color:#00E6C5">user: User</span> 
+          <span style="color:#E95C42">=</span> 
+          <span style="color:#2FA6CF">{</span>
+        </p>
+        <p style="margin-left:45px">
+          name: <span style="color:#7EBB64">"Taco the cat"</span>,
+        </p>
+        <p style="margin-left:45px">
+          id: <span style="color:yellow">0</span>,<br>
+        </p>
+        <p>
+          <span style="color:#2FA6CF">}</span>;
+        </p>
+    </div>
+
       </div>
       <div>
         <h2>Placeholder 3</h2>

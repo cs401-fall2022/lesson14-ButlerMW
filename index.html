@@ -307,53 +307,158 @@
               <span style="color:#C24CE8">obj</span>:
               <span style="color: #00E6C5;">string</span> |  
               <!-- <span style="color:#C24CE8">id</span>: -->
-              <span style="color:#00E6C5;">string</span>)[])  
+              <span style="color:#00E6C5;">string</span>[])  
               <span style="color:#2FA6CF">{</span>
           </p>
           <p style="margin-left:45px">
-            <span style="color:#7EBB64">return</span>
+            <span style="color:#7EBB64">return</span> obj.length;
+          </p>
+          <p>
+            <span style="color:#2FA6CF">}</span>
+          </p>
+        </div>
+        <p>Below is a table that shows the types of variables with the use of <span style="color: yellow;">typeof</span>:</p>
+
+        <table id="typeof-table">
+          <tr>
+            <th>Type</th>
+            <th>Predicate</th>
+          </tr>
+          <tr>
+            <td>string</td>
+            <td>typeof s === "string"</td>
+          </tr>
+          <tr>
+            <td>number</td>
+            <td>typeof n === "number"</td>
+          </tr>
+          <tr>
+            <td>boolean</td>
+            <td>typeof b === "boolean"</td>
+          </tr>
+          <tr>
+            <td>undefined</td>
+            <td>type of undefined === "undefined"</td>
+          </tr>
+          <tr>
+            <td>function</td>
+            <td>typeof f === "function"</td>
+          </tr>
+          <tr>
+            <td>array</td>
+            <td>Array.isArray(a)</td>
+          </tr>
+        </table>
+
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">function</span>
+            <span style="color:#00E6C5">getLength</span>( 
+              <span style="color:#C24CE8">obj</span>:
+              <span style="color: #00E6C5;">string</span> |  
+              <!-- <span style="color:#C24CE8">id</span>: -->
+              <span style="color:#00E6C5;">string</span>[])  
+              <span style="color:#2FA6CF">{</span>
           </p>
           <p style="margin-left:45px">
-            id: <span style="color:#C24CE8">number</span> 
-          </p>
-          <p>
-            <span style="color:#2FA6CF">}</span>;
-          </p>
-  
-          <p>
-            <span style="color:#C24CE8">class</span> 
-            <span style="color:#00E6C5">UserAccount</span> 
+            <span style="color:#7EBB64">if</span> (
+            <span style="color:#7EBB64">typeof</span> 
+            <span style="color:#C24CE8">obj</span> 
+            <span style="color:#E95C42">===</span> "string")
             <span style="color:#2FA6CF">{</span>
           </p>
-          <p style="margin-left:45px">
-            name: <span style="color:#C24CE8">string</span> 
-          </p>
-          <p style="margin-left:45px">
-            id: <span style="color:#C24CE8">number</span> 
-          </p>
-          <p><span style="color:black">this is a spacer and a secret message :) !</span></p>
-          <p style="margin-left:45px">
-            <span style="color:#C24CE8">constructor</span>(
-              <span style="color:#C24CE8">name</span>:
-              <span style="color: #00E6C5;">string</span>, 
-              <span style="color:#C24CE8">id</span>:
-              <span style="color: #00E6C5;">number</span>) { 
-              </p>
-              <p style="margin-left:90px">
-                name: <span style="color:#C24CE8">string</span>
-              </p>
-              <p style="margin-left:90px">
-                id: <span style="color:#C24CE8">number</span> 
-              </p>
+          <p style="margin-left:90px">
+              <span style="color:#7EBB64">return</span> [ 
+              <span style="color:#C24CE8">obj</span> ];
             </p>
             <p style="margin-left:45px">
-              } 
+              <span style="color:#2FA6CF">}</span>
             </p>
+            <p style="margin-left:45px">
+              <span style="color:#7EBB64">return</span>
+              <span style="color:#C24CE8">obj</span>;
+          </p>
           <p>
-            <span style="color:#2FA6CF">}</span>;
+            <span style="color:#2FA6CF">}</span>
           </p>
         </div>
 
+        <h3>Generics</h3>
+        <p>
+          Generics provides variables to types. One of the most common ways is with an array. A generic array will contain the values 
+          in which the array was described when declared:
+        </p>
+
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">type</span> 
+            <span style="color:#00E6C5">ArrayOfStrings</span> 
+            <span style="color:#E95C42">=</span> 
+            <span style="color:#C24CE8">Array</span><<span style="color:#00E6C5">string</span>>; 
+          </p>
+          <p>
+            <span style="color:#C24CE8">type</span> 
+            <span style="color:#00E6C5">ArrayOfNums</span> 
+            <span style="color:#E95C42">=</span> 
+            <span style="color:#C24CE8">Array</span><<span style="color:#00E6C5">number</span>>; 
+          </p>
+          <p>
+            <span style="color:#C24CE8">type</span> 
+            <span style="color:#00E6C5">ArrayOfNameObjects</span> 
+            <span style="color:#E95C42">=</span> 
+            <span style="color:#C24CE8">Array</span><{<span style="color:#00E6C5">name: string</span>}>; 
+          </p>
+        </div>
+        
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">interface</span>
+            <span style="color:#FCE46C">Bag< Type > {</span>
+          </p>
+          <p style="margin-left:45px">
+            <span style="color:#FCE46C">add</span>:
+            <span style="color:#C24CE8">(</span>
+            <span style="color:#00E6C5">obj</span>:
+            <span style="color:#FCE46C">Type</span>
+            <span style="color:#C24CE8">) => </span>void;
+          </p>
+          <p style="margin-left:45px">
+            <span style="color:#FCE46C">get</span>:
+            <span style="color:#C24CE8">() => </span>
+            <span style="color:#FCE46C">Type</span>;
+          </p>
+          <p><span style="color:#FCE46C">}</span></p>
+          <p style="margin-top:45px;"><span style="color:#4AC54A">// This line is a shortcut to tell TypeScript there is a</span></p>
+          <p><span style="color:#4AC54A">// constant called `bag`, and to not worry about where it came from.</span></p>
+          <p>
+            <span style="color:#C24CE8">declar const</span>
+            <span style="color:#00E6C5">bag</span>:
+            <span style="color:#FCE46C">Bag<</span> string
+            <span style="color:#FCE46C">></span>;
+          </p>
+         
+          <p style="margin-top:45px">
+            <span style="color:#4AC54A">// object is a string, because we declared it above as the variable part of Bag.</span></p>
+          <p>
+            <span style="color:#C24CE8">const</span>
+            <span style="color:#00E6C5">object</span> =
+            <span style="color:#00E6C5">bag</span>.<span style="color:#FCE46C">get()</span>;
+          </p>
+
+          <p style="margin-top:45px">
+            <span style="color:#4AC54A">// Since the bag variable is a string, you can't pass a number to the add function.</span></p>
+          <p>
+            <span style="color:#00E6C5">bag</span>.<span style="color:#FCE46C">get(</span>
+            <span style="color:#EC5C42">23</span>
+            <span style="color:#FCE46C">)</span>;
+          </p>
+          <p>
+            <span style="background-color: rgb(63, 4, 4);">
+              Argument of type 'number' is not assignable to parameter of type 'string'.
+            </span>
+          </p>
+        </div>
+        
       </div>
 
       <div>

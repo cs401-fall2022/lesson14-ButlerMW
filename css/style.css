@@ -72,3 +72,28 @@ h3 {
   width: 96%;
   padding: 12px;
 }
+
+#typeof-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#typeof-table td, #typeof-table th {
+  padding: 8px;
+}
+
+#typeof-table td {
+  border-top: 1px solid #757575;
+}
+
+#typeof-table tr:nth-child(even){background-color: #525252;}
+
+#typeof-table tr:hover {background-color: rgb(122, 118, 118);}
+
+#typeof-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: white;
+}

@@ -249,15 +249,113 @@
       </p>
       </div>
       <div>
-        <h2>Placeholder 3</h2>
+        <h2>Composing Types</h2>
         <p>
-          Bacon ipsum dolor amet alcatra beef burgdoggen, shank cupim chuck pork short loin capicola boudin tail. 
-          Ball tip tri-tip ribeye short loin, brisket alcatra sausage doner meatball drumstick kevin. Corned beef 
-          tongue pork chislic. Short loin leberkas ham hock tail boudin spare ribs. Filet mignon short ribs meatloaf 
-          turducken tenderloin, alcatra short loin. Shankle flank t-bone, cow short loin chislic pork belly meatloaf kevin 
-          shoulder sausage ham. Swine andouille pork shankle pork loin alcatra.
+          By combining simple types, TypeScript can create complex types. Two most common ways to do this is with <strong><span style="color:yellow">unions</span></strong>
+          and <strong><span style="color:yellow">generics</span></strong>
         </p>
+        <h3>Unions</h3>
+        <p>
+          Unions can declare that type could be one of many types. For example, when declaring a boolean we can have the value either true or false:
+        </p>
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">type</span> 
+            <span style="color:#00E6C5">boolean</span> 
+            <span style="color:#E95C42">=</span> 
+            <span style="color:#7EBB64">true</span> | 
+            <span style="color:#7EBB64">false</span>
+          </p>
+        </div>
+        <p>
+          One of the more popular use cases for union types is declaring a "set" of strings or numbers:
+        </p>
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">type</span> 
+            <span style="color:#00E6C5">cities</span> 
+            <span style="color:#E95C42">=</span> 
+            <span style="color:#7EBB64">"Boise"</span> | 
+            <span style="color:#7EBB64">"Homedale"</span> | 
+            <span style="color:#7EBB64">"Xichang"</span> | 
+            <span style="color:#7EBB64">"San Diego"</span> | 
+            <span style="color:#7EBB64">"St. Louis"</span>
+          </p>
+          <p>
+            <span style="color:#C24CE8">type</span> 
+            <span style="color:#00E6C5">primeNumbers</span> 
+            <span style="color:#E95C42">=</span> 
+            <span style="color:#7EBB64">1</span> | 
+            <span style="color:#7EBB64">13</span> | 
+            <span style="color:#7EBB64">7</span>
+          </p>
+          <p>
+            <span style="color:#C24CE8">type</span> 
+            <span style="color:#00E6C5">answer</span> 
+            <span style="color:#E95C42">=</span> 
+            <span style="color:#7EBB64">"yes"</span> | 
+            <span style="color:#7EBB64">"no"</span>
+          </p>
+        </div>
+        <p>
+          Unions can also provide a way to handle different types too. In the example card below contains a funciton that can take in an array or a string:
+        </p>
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">function</span>
+            <span style="color:#00E6C5">getLength</span>( 
+              <span style="color:#C24CE8">obj</span>:
+              <span style="color: #00E6C5;">string</span> |  
+              <!-- <span style="color:#C24CE8">id</span>: -->
+              <span style="color:#00E6C5;">string</span>)[])  
+              <span style="color:#2FA6CF">{</span>
+          </p>
+          <p style="margin-left:45px">
+            <span style="color:#7EBB64">return</span>
+          </p>
+          <p style="margin-left:45px">
+            id: <span style="color:#C24CE8">number</span> 
+          </p>
+          <p>
+            <span style="color:#2FA6CF">}</span>;
+          </p>
+  
+          <p>
+            <span style="color:#C24CE8">class</span> 
+            <span style="color:#00E6C5">UserAccount</span> 
+            <span style="color:#2FA6CF">{</span>
+          </p>
+          <p style="margin-left:45px">
+            name: <span style="color:#C24CE8">string</span> 
+          </p>
+          <p style="margin-left:45px">
+            id: <span style="color:#C24CE8">number</span> 
+          </p>
+          <p><span style="color:black">this is a spacer and a secret message :) !</span></p>
+          <p style="margin-left:45px">
+            <span style="color:#C24CE8">constructor</span>(
+              <span style="color:#C24CE8">name</span>:
+              <span style="color: #00E6C5;">string</span>, 
+              <span style="color:#C24CE8">id</span>:
+              <span style="color: #00E6C5;">number</span>) { 
+              </p>
+              <p style="margin-left:90px">
+                name: <span style="color:#C24CE8">string</span>
+              </p>
+              <p style="margin-left:90px">
+                id: <span style="color:#C24CE8">number</span> 
+              </p>
+            </p>
+            <p style="margin-left:45px">
+              } 
+            </p>
+          <p>
+            <span style="color:#2FA6CF">}</span>;
+          </p>
+        </div>
+
       </div>
+
       <div>
         <h2>Placeholder 4</h2>
         <p>

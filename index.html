@@ -21,7 +21,7 @@
     <h3>Contents</h3>
     <ul>
       <li>What is TypeScript?</li>
-      <li>Placeholder 2</li>
+      <li>Declaring Types</li>
       <li>Placeholder 3</li>
       <li>Placeholder 4</li>
       <li>Placeholder 5</li>
@@ -102,10 +102,10 @@
             <span style="color:#2FA6CF">{</span>
           </p>
           <p style="margin-left:45px">
-            name: <span style="color:#C24CE8">name</span> 
+            name: <span style="color:#C24CE8">string</span> 
           </p>
           <p style="margin-left:45px">
-            id: <span style="color:#C24CE8">int</span> 
+            id: <span style="color:#C24CE8">number</span> 
           </p>
           <p>
             <span style="color:#2FA6CF">}</span>;
@@ -134,6 +134,119 @@
         </p>
     </div>
 
+      <p>
+        If you provide an object that doesn't match the interface you have provided, TypeScript will warn you:
+      </p>
+      <div id="example-card">
+        <p>
+          <span style="color:#C24CE8">interface</span> 
+          <span style="color:#00E6C5">User</span> 
+          <span style="color:#2FA6CF">{</span>
+        </p>
+        <p style="margin-left:45px">
+          name: <span style="color:#C24CE8">string</span> 
+        </p>
+        <p style="margin-left:45px">
+          id: <span style="color:#C24CE8">number</span> 
+        </p>
+        <p>
+          <span style="color:#2FA6CF">}</span>;
+        </p>
+
+        <p>
+          <span style="color:#C24CE8">const</span> 
+          <span style="color:#00E6C5">user: User</span> 
+          <span style="color:#E95C42">=</span> 
+          <span style="color:#2FA6CF">{</span>
+        </p>
+        <p style="margin-left:45px">
+          name: <span style="color:#7EBB64">"Taco the cat"</span>,
+        </p>
+        <p style="margin-left:45px">
+          id: <span style="color:yellow">0</span>,<br>
+        </p>
+        <p>
+          <span style="color:#2FA6CF">}</span>;
+        </p>
+        <p>
+          <span style="background-color: rgb(63, 4, 4);">Type '{ username: string; id: number; }' is not assignable to type 'User'.
+            Object literal may only specify known properties, and 'username' does not exist in type 'User'.</span>
+          </p>
+      </div>
+    
+      <p>
+        Just like JavaScript TypeScript supports classes and object-oriented programming. Which means it can use an interface declaration with classes:
+      </p>
+      <div id="example-card">
+        <p>
+          <span style="color:#C24CE8">interface</span> 
+          <span style="color:#00E6C5">User</span> 
+          <span style="color:#2FA6CF">{</span>
+        </p>
+        <p style="margin-left:45px">
+          name: <span style="color:#C24CE8">string</span> 
+        </p>
+        <p style="margin-left:45px">
+          id: <span style="color:#C24CE8">number</span> 
+        </p>
+        <p>
+          <span style="color:#2FA6CF">}</span>;
+        </p>
+
+        <p>
+          <span style="color:#C24CE8">class</span> 
+          <span style="color:#00E6C5">UserAccount</span> 
+          <span style="color:#2FA6CF">{</span>
+        </p>
+        <p style="margin-left:45px">
+          name: <span style="color:#C24CE8">string</span> 
+        </p>
+        <p style="margin-left:45px">
+          id: <span style="color:#C24CE8">number</span> 
+        </p>
+        <p><span style="color:black">this is a spacer and a secret message :) !</span></p>
+        <p style="margin-left:45px">
+          <span style="color:#C24CE8">constructor</span>(
+            <span style="color:#C24CE8">name</span>:
+            <span style="color: #00E6C5;">string</span>, 
+            <span style="color:#C24CE8">id</span>:
+            <span style="color: #00E6C5;">number</span>) { 
+            </p>
+            <p style="margin-left:90px">
+              name: <span style="color:#C24CE8">string</span>
+            </p>
+            <p style="margin-left:90px">
+              id: <span style="color:#C24CE8">number</span> 
+            </p>
+          </p>
+          <p style="margin-left:45px">
+            } 
+          </p>
+        <p>
+          <span style="color:#2FA6CF">}</span>;
+        </p>
+      </div>
+      <p>
+        JavaScript contains seven primitive types which are:
+        <ul>
+          <li>boolean</li>
+          <li>bigint</li>
+          <li>null</li>
+          <li>number</li>
+          <li>string</li>
+          <li>symbol</li>
+          <li>undefined</li>
+        </ul>
+        And all can be used in an interface
+      </p>
+      <p>
+        TypeScript extends the JavaScript list with <strong><span style="color:yellow">any</span></strong>, which allows anything. <strong><span style="color:yellow">Unknown</span></strong> 
+        ensures someone using this type declares what the type is. <strong><span style="color:yellow">Never</span></strong> makes it not possible that this type could happen and 
+        <strong><span style="color:yellow">void</span></strong> returns <strong><span style="color:yellow">undefined</span></strong> or has no return type.
+      </p>
+      <p>
+        There are two syntaxes for building types: Interfaces and Types. Interfaces are prefered and type when specific features are needed.
+      </p>
       </div>
       <div>
         <h2>Placeholder 3</h2>

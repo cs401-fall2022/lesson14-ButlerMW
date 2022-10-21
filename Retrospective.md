@@ -38,3 +38,5 @@ https://stackoverflow.com/questions/2717127/gradient-borders
 https://stackoverflow.com/questions/6148032/how-to-make-a-font-thinner-on-web
 
 https://www.w3schools.com/tags/tag_span.asp
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy

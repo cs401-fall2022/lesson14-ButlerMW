@@ -1,18 +1,61 @@
 // Testing out functionality
 console.log("Hello World!!");
 
-interface Bag<Type> {
-  add: (obj: Type) => void;
-  get: () => Type;
+/**
+ * This returns the string hello
+ * @returns the String hello
+ */
+ function hello (): String {
+  return "Hello World";
+};
+
+/**
+* turns demo red
+*/
+function darkModeButton() {
+  if(document != null){
+      // console.log(document.getElementById("demo").style.color);
+
+      let c = document.getElementById("demo").style.color;
+      console.log(c);
+      if(c === 'white'){
+       
+        document.getElementById("demo").style.color = "black";
+        document.getElementById("demo").style.backgroundColor = "white";
+        document.getElementById("demo").textContent = "Light Mode";
+        
+        document.getElementById("dark-mode-card")?.style.backgroundColor = "rgb(49,49,49)";
+
+        document.body.style.backgroundColor = "rgb(38,38,38)";
+        
+        var elements = document.getElementsByClassName("dark-mode");
+        for(var i = 0; i < elements.length; ++i)  {
+          elements[i].style.color = "white";
+        }
+          // document.querySelectorAll("dark-mode").for
+          
+        }else{
+          
+          // var elements = document.getElementsByClassName("dark-mode");
+          // for(var i = 0; i < elements.length; ++i)  {
+          //   elements[i].style.size = "100px";
+          // }
+          // document.getElementById("dark-mode").style.color = "white";
+          document.getElementById("demo").style.color = "white";
+          document.getElementById("demo").style.backgroundColor = "rgb(38,38,38)";
+          document.getElementById("demo").textContent = "Dark Mode";
+          
+          document.getElementById("dark-mode-card").style.backgroundColor = "lightgrey";
+            
+            // document.getElementById("container").style.backgroundColor = "rgb(49,49,49)";
+            document.body.style.backgroundColor = "white";
+            
+            var elements = document.getElementsByClassName("dark-mode");
+            for(var i = 0; i < elements.length; ++i)  {
+              elements[i].style.color = "black";
+            }
+      }
+  }    
 }
 
-// This line is a shortcut to tell TypeScript there is a
-// constant called `backpack`, and to not worry about where it came from.
-declare const backpack: Backpack<string>;
-
-// object is a string, because we declared it above as the variable part of Backpack.
-const object = backpack.get();
-
-// Since the backpack variable is a string, you can't pass a number to the add function.
-backpack.add(23);
-Argument of type 'number' is not assignable to parameter of type 'string'.
+export {hello, darkModeButton}

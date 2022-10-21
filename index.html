@@ -16,21 +16,22 @@
 <body>
   <div id="title-bar">
     <h1>TypeScript Introduction</h1>
+    <button id="demo" class="button" onclick="darkModeButton()">Light Mode</button>
   </div>
   <div id="content-menu">
-    <h3>Contents</h3>
+    <h3 class="dark-mode">Contents</h3>
     <ul>
-      <li>What is TypeScript?</li>
-      <li>Declaring Types</li>
-      <li>Placeholder 3</li>
-      <li>Placeholder 4</li>
-      <li>Placeholder 5</li>
+      <li class="dark-mode">What is TypeScript?</li>
+      <li class="dark-mode">Declaring Types</li>
+      <li class="dark-mode">Composing Types</li>
+      <li class="dark-mode">Structural Type System</li>
+      <li class="dark-mode">More Information</li>
     </ul>
   </div>
   <div id="container">
-    <div>
+    <div id="dark-mode-card">
       <!-- <div> -->
-          <p>
+          <p class="dark-mode">
             In this page we will go over the a quick introduction to typescript. 
             This is intended for people that are completrly new to TypeScript or coding, know 
             JavaScript but do not know TypeScript, or a quick brush up for some one who is 
@@ -38,8 +39,8 @@
           </p>
       <!-- </div> -->
       <div>
-        <h2>What is TypeScript?</h2>
-        <p>
+        <h2 class="dark-mode">What is TypeScript?</h2>
+        <p class="dark-mode">
           TypeScript is a free and open source programming language developed and maintained by Microsoft.
           TypeScript is similar to JavaScript, but contains more. TypeScript offers all of JavaScript's features, and 
           additional layer of features from the TypeScript type system. Below we will learn more about TypeScript features 
@@ -47,38 +48,38 @@
         </p>
       </div>
       <div>
-        <h2>Declaring Types</h2>
-        <p>
+        <h2 class="dark-mode">Declaring Types</h2>
+        <p class="dark-mode">
           TypeScript will generate types in many cases that will be generate/translated to JavaScript. When creating a variable
           and assinging that variable, TypeScript will used the value as its type:
         </p>
-        <div id="example-card">
+      <div id="example-card">
           <p>
             <span style="color:#C24CE8">let</span> 
             <span style="color:#00E6C5">hello</span> 
             <span style="color:#E95C42">=</span> 
             <span style="color:#7EBB64">"Hello TypeScript World!"</span>;
           </p>
-        </div>
-        <p>
+      </div>
+      <p class="dark-mode">
           TypeScript can build a type system that accepts JavaScript code but instead has types. This feature allows us to 
           create typs without needing additional characters to make types explicit. In the example card above TypeScript knows
           that <strong><span style="color:yellow">hello</span></strong> is a String type. 
-        </p>
-        <h3>Objects</h3>
-        <p>
+      </p>
+      <h3 class="dark-mode">Objects</h3>
+      <p class="dark-mode">
           In JavaScript, you can use a wide variety of differnt design patterns. This, however, can make it difficult for types to be inferred automatically. 
           To cover these cases, TypeScript contains an extension of the JavaScript language and this offers places for you to tell TypeScript what these types will be. 
-        </p>
+      </p>
+      <p class="dark-mode">
+        In the example card below, creates an Object with an inferred type which includes <strong><span style="color:yellow">name</span></strong> as a String and
+        <strong><span style="color:yellow">id</span></strong> as an int 
+      </p>
+      <div id="example-card">
         <p>
-          In the example card below, creates an Object with an inferred type which includes <strong><span style="color:yellow">name</span></strong> as a String and
-          <strong><span style="color:yellow">id</span></strong> as an int 
-        </p>
-        <div id="example-card">
-            <p>
-              <span style="color:#C24CE8">const</span> 
-              <span style="color:#00E6C5">user</span> 
-              <span style="color:#E95C42">=</span> 
+          <span style="color:#C24CE8">const</span> 
+          <span style="color:#00E6C5">user</span> 
+          <span style="color:#E95C42">=</span> 
               <span style="color:#2FA6CF">{</span>
             </p>
             <p style="margin-left:45px">
@@ -92,7 +93,7 @@
             </p>
         </div>
 
-        <p>
+        <p class="dark-mode">
           To explicitly describe this object's shape using an <strong><span style="color:yellow">Interface</span></strong> declaration like so:
         </p>
         <div id="example-card">
@@ -112,7 +113,7 @@
           </p>
       </div>
 
-      <p>
+      <p class="dark-mode">
         JavaScript objects conforms to the shape of your new <strong><span style="color:yellow">Interface</span></strong> by using syntax like 
         <strong><span style="color:yellow">: TypeName</span></strong> after variable declaration:
       </p>
@@ -134,7 +135,7 @@
         </p>
     </div>
 
-      <p>
+      <p class="dark-mode">
         If you provide an object that doesn't match the interface you have provided, TypeScript will warn you:
       </p>
       <div id="example-card">
@@ -174,7 +175,7 @@
           </p>
       </div>
     
-      <p>
+      <p class="dark-mode">
         Just like JavaScript TypeScript supports classes and object-oriented programming. Which means it can use an interface declaration with classes:
       </p>
       <div id="example-card">
@@ -226,36 +227,36 @@
           <span style="color:#2FA6CF">}</span>;
         </p>
       </div>
-      <p>
+      <p class="dark-mode">
         JavaScript contains seven primitive types which are:
         <ul>
-          <li>boolean</li>
-          <li>bigint</li>
-          <li>null</li>
-          <li>number</li>
-          <li>string</li>
-          <li>symbol</li>
-          <li>undefined</li>
+          <li class="dark-mode">boolean</li>
+          <li class="dark-mode">bigint</li>
+          <li class="dark-mode">null</li>
+          <li class="dark-mode">number</li>
+          <li class="dark-mode">string</li>
+          <li class="dark-mode">symbol</li>
+          <li class="dark-mode">undefined</li>
         </ul>
-        And all can be used in an interface
       </p>
-      <p>
+      <p class="dark-mode">And all can be used in an interface</p>
+      <p class="dark-mode">
         TypeScript extends the JavaScript list with <strong><span style="color:yellow">any</span></strong>, which allows anything. <strong><span style="color:yellow">Unknown</span></strong> 
         ensures someone using this type declares what the type is. <strong><span style="color:yellow">Never</span></strong> makes it not possible that this type could happen and 
         <strong><span style="color:yellow">void</span></strong> returns <strong><span style="color:yellow">undefined</span></strong> or has no return type.
       </p>
-      <p>
+      <p class="dark-mode">
         There are two syntaxes for building types: Interfaces and Types. Interfaces are prefered and type when specific features are needed.
       </p>
       </div>
       <div>
-        <h2>Composing Types</h2>
-        <p>
+        <h2 class="dark-mode">Composing Types</h2>
+        <p class="dark-mode">
           By combining simple types, TypeScript can create complex types. Two most common ways to do this is with <strong><span style="color:yellow">unions</span></strong>
           and <strong><span style="color:yellow">generics</span></strong>
         </p>
-        <h3>Unions</h3>
-        <p>
+        <h3 class="dark-mode">Unions</h3>
+        <p class="dark-mode">
           Unions can declare that type could be one of many types. For example, when declaring a boolean we can have the value either true or false:
         </p>
         <div id="example-card">
@@ -267,7 +268,7 @@
             <span style="color:#7EBB64">false</span>
           </p>
         </div>
-        <p>
+        <p class="dark-mode">
           One of the more popular use cases for union types is declaring a "set" of strings or numbers:
         </p>
         <div id="example-card">
@@ -297,7 +298,7 @@
             <span style="color:#7EBB64">"no"</span>
           </p>
         </div>
-        <p>
+        <p class="dark-mode">
           Unions can also provide a way to handle different types too. In the example card below contains a funciton that can take in an array or a string:
         </p>
         <div id="example-card">
@@ -317,36 +318,36 @@
             <span style="color:#2FA6CF">}</span>
           </p>
         </div>
-        <p>Below is a table that shows the types of variables with the use of <span style="color: yellow;">typeof</span>:</p>
+        <p class="dark-mode">Below is a table that shows the types of variables with the use of <span style="color: yellow;">typeof</span>:</p>
 
         <table id="typeof-table">
           <tr>
-            <th>Type</th>
-            <th>Predicate</th>
+            <th class="dark-mode">Type</th>
+            <th class="dark-mode">Predicate</th>
           </tr>
           <tr>
-            <td>string</td>
-            <td>typeof s === "string"</td>
+            <td class="dark-mode">string</td>
+            <td class="dark-mode">typeof s === "string"</td>
           </tr>
           <tr>
-            <td>number</td>
-            <td>typeof n === "number"</td>
+            <td class="dark-mode">number</td>
+            <td class="dark-mode">typeof n === "number"</td>
           </tr>
           <tr>
-            <td>boolean</td>
-            <td>typeof b === "boolean"</td>
+            <td class="dark-mode">boolean</td>
+            <td class="dark-mode">typeof b === "boolean"</td>
           </tr>
           <tr>
-            <td>undefined</td>
-            <td>type of undefined === "undefined"</td>
+            <td class="dark-mode">undefined</td>
+            <td class="dark-mode">type of undefined === "undefined"</td>
           </tr>
           <tr>
-            <td>function</td>
-            <td>typeof f === "function"</td>
+            <td class="dark-mode">function</td>
+            <td class="dark-mode">typeof f === "function"</td>
           </tr>
           <tr>
-            <td>array</td>
-            <td>Array.isArray(a)</td>
+            <td class="dark-mode">array</td>
+            <td class="dark-mode">Array.isArray(a)</td>
           </tr>
         </table>
 
@@ -383,8 +384,8 @@
           </p>
         </div>
 
-        <h3>Generics</h3>
-        <p>
+        <h3 class="dark-mode">Generics</h3>
+        <p class="dark-mode">
           Generics provides variables to types. One of the most common ways is with an array. A generic array will contain the values 
           in which the array was described when declared:
         </p>
@@ -462,26 +463,208 @@
       </div>
 
       <div>
-        <h2>Placeholder 4</h2>
+        <h2 class="dark-mode">Structural Type System</h2>
+        <p class="dark-mode">
+          Structural typing or also known as "duck typing" is one of TypeScript biggest features. Structural typing focuses
+          on the shape that the values have. If two objects have the same shape, they are considered to be the same type.
+        </p>
+
+        <div id="example-card">
+          <p>
+            <span style="color:#C24CE8">interface</span>
+            <span style="color:#FCE46C">Point {</span>
+          </p>
+          <p style="margin-left:45px">
+            <span style="color:#00E6C5">x</span>: number;
+          </p>
+          <p style="margin-left:45px">
+            <span style="color:#00E6C5">y</span>: number;
+          </p>
+          <p>
+            <span style="color:#FCE46C">}</span>
+          </p>
+
+          <p style="margin-top:45px">
+            <span style="color:#C24CE8">function</span>
+            <span style="color:#FCE46C">logPoint(</span>
+            <span style="color:#00E6C5">p</span>:
+            <span style="color:#FCE46C">Point) {</span>
+          </p>
+            
+          <p style="margin-left:45px">
+            <span style="color:#C24CE8">const</span>
+            <span style="color:#00E6C5">console</span>.<span style="color:#FCE46C">log(</span>`
+            <span style="color:#00E6C5">${p.x}</span>,
+            <span style="color:#00E6C5">${p.y}</span>`
+            <span style="color:#FCE46C">)</span>;
+          </p>
+          <p>
+            <span style="color:#FCE46C">}</span>
+          </p>
+
+          <p style="margin-top:45px">
+            <span style="color:#4AC54A">// logs "12, 26"</span>
+          </p>
+          <p>
+            <span style="color:#C24CE8">const</span>
+            <span style="color:#00E6C5">point</span> = 
+            <span style="color:#FCE46C">{</span> x:
+            <span style="color:#EC5C42">23</span>, y:
+            <span style="color:#EC5C42">26</span>
+            <span style="color:#FCE46C">}</span>;
+          </p>
+
+          <p>
+            <span style="color:#C24CE8">const</span>
+            <span style="color:#FCE46C">logPoint(</span>
+              <span style="color:#00E6C5">point</span>
+            <span style="color:#FCE46C">)</span>;
+          </p>
+        </div>
+        
+        <p class="dark-mode">
+          The point variable is never declared to be a Point type. TypeScript compares the shape
+          of point to the shape of Point in the type-check. Since they have the same shape, the code passes.
+        </p>
+
+      <div id="example-card">
         <p>
-          Prosciutto pork chop drumstick tongue, corned beef jowl venison turducken ham hock filet mignon short loin capicola 
-          sirloin bacon pancetta. Kevin shankle shank tri-tip pancetta flank biltong chuck ground round doner beef ribs 
-          tongue chicken cupim. Prosciutto capicola cupim, meatloaf ribeye spare ribs tenderloin pancetta bacon pork tri-tip 
-          short ribs boudin. Sausage flank pork, ground round chislic venison rump t-bone andouille boudin chicken leberkas beef 
-          short loin. Pork chop flank short loin ball tip spare ribs jerky. Pork loin pork chop corned beef, venison sirloin doner 
-          prosciutto landjaeger shankle bacon hamburger ribeye cupim.
+          <span style="color:#C24CE8">const</span>
+          <span style="color:#00E6C5">point3</span> = 
+          <span style="color:#FCE46C">{</span> x:
+          <span style="color:#EC5C42">12</span>, y:
+          <span style="color:#EC5C42">26</span>, z:
+          <span style="color:#EC5C42">89</span>
+          <span style="color:#FCE46C">}</span>;
+        </p>
+          
+        <p>
+          <span style="color:#FCE46C">logPoint(</span>
+          <span style="color:#00E6C5">point3</span>
+          <span style="color:#FCE46C">)</span>;
+          <span style="color:#4AC54A">// logs "12, 26"</span>
+        </p>
+        
+        <p style="margin-top:45px">
+          <span style="color:#C24CE8">const</span>
+          <span style="color:#00E6C5">rect</span> = 
+          <span style="color:#FCE46C">{</span> x:
+          <span style="color:#EC5C42">33</span>, y:
+          <span style="color:#EC5C42">3</span>, width:
+          <span style="color:#EC5C42">30</span>, height:
+          <span style="color:#EC5C42">80</span>
+          <span style="color:#FCE46C">}</span>;
+        </p>
+
+        <p>
+          <span style="color:#FCE46C">logPoint(</span>
+          <span style="color:#00E6C5">rect</span>
+          <span style="color:#FCE46C">)</span>;
+          <span style="color:#4AC54A">// logs "33, 3"</span>
+        </p>
+       
+        <p style="margin-top:45px">
+          <span style="color:#4AC54A">// logs "12, 26"</span>
+        </p>
+        <p>
+          <span style="color:#C24CE8">const</span>
+          <span style="color:#00E6C5">color</span> = 
+          <span style="color:#FCE46C">{</span> hex:
+          <span style="color:#7EBB64">"#187ABF"</span>
+          <span style="color:#FCE46C">}</span>;
+        </p>
+
+        <p>
+          <span style="color:#FCE46C">logPoint(</span>
+          <span style="color:#00E6C5">color</span>
+          <span style="color:#FCE46C">)</span>;
+        </p>
+
+        <p>
+          <span style="background-color: rgb(63, 4, 4);">
+            Argument of type '{ hex: string; }' is not assignable to parameter of type 'Point'.
+              Type '{ hex: string; }' is missing the following properties from type 'Point': x, y
+          </span>
         </p>
       </div>
-      <div>
-        <h2>Placeholder 5</h2>
+      <p class="dark-mode">
+        There are little to no difference how classes and objects conform to shapes:
+      </p>
+
+      <div id="example-card">
         <p>
-          Ground round ball tip kielbasa bacon. Landjaeger venison pork belly, ham pork loin short ribs cow pig bresaola strip steak 
-          turkey beef bacon biltong. Ribeye biltong prosciutto leberkas shankle capicola sausage pastrami tongue short loin bacon. Shank p
-          ig frankfurter, leberkas salami sirloin pancetta alcatra beef ribs chicken swine jerky pork rump fatback. Pork belly sirloin pork 
-          venison fatback tri-tip turducken bresaola meatball ham ball tip tongue tail. Swine short ribs filet mignon shoulder jerky porchetta
-           landjaeger picanha pastrami. Jerky kielbasa pork chop prosciutto short loin landjaeger.
+          <span style="color:#C24CE8">class</span>
+          <span style="color:#FCE46C">VirtualPoint {</span> 
+          </p>
+          <p style="margin-left:45px">
+          <span style="color:#00E6C5">x</span>: number;
+        </p>
+        <p style="margin-left:45px">
+          <span style="color:#00E6C5">y</span>: number;
+        </p>
+        
+        <p style="margin-top:45px; margin-left:45px">
+          <span style="color:#C24CE8">constructor</span>(
+          <span style="color:#00E6C5">x</span>: number, 
+          <span style="color:#00E6C5">y</span>: number) {
+        </p>
+        <p style="margin-left:90px"> 
+          <span style="color:#00E6C5">this</span>.<span style="color:#00E6C5">x</span> =
+          <span style="color:#00E6C5">x</span>
+        </p>
+        <p style="margin-left:90px"> 
+          <span style="color:#00E6C5">this</span>.<span style="color:#00E6C5">y</span> = 
+          <span style="color:#00E6C5">y</span>
+        </p> 
+        <p style="margin-left:45px">
+          }
+        </p>
+        <p>
+          <span style="color:#FCE46C">}</span> 
+        </p>
+          
+        <p style="margin-top:45px">
+          <span style="color:#C24CE8">const</span>
+          <span style="color:#00E6C5">newVirtualPoint</span> = 
+          <span style="color:#EC5C42">new</span>
+          <span style="color:#FCE46C">VirtualPoint(</span>
+          <span style="color:#EC5C42">13</span>,
+          <span style="color:#EC5C42">56</span>
+          <span style="color:#FCE46C">)</span>;
+        </p>
+
+        <p>
+          <span style="color:#FCE46C">logPoint(</span>
+          <span style="color:#00E6C5">newVirtualPoint</span>
+          <span style="color:#FCE46C">)</span>;
+          <span style="color:#4AC54A">// logs "13, 56"</span>
         </p>
       </div>
+      <p class="dark-mode">If the object or class has all the required properties, TypeScript will say they match, regardless of the implementation details.</p>
+    </div>
+    <div>
+      <h2 class="dark-mode">More Information</h2>
+      <p class="dark-mode">
+        For more information, check out the links below
+      </p>
+      <ul>
+        <li><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html" target="_blank">TypeScript in 5 minutes</a></li>
+        <li><a href="https://www.typescriptlang.org/docs/handbook/2/basic-types.html" target="_blank">Basic Types</a></li>
+        <li><a href="https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html" target="_blank">Migrating From JavaScript</a></li>
+        <li><a href="https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html" target="_blank">Intro to JS and TS</a></li>
+        <li><a href="https://www.typescriptlang.org/docs/handbook/intro.html" target="_blank">TypeScript handbook</a></li>
+        <li><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html" target="_blank">TypeScript for Java/C# Programmers</a></li>
+      </ul>
+    <!-- </div> -->
+    </div>
+    <div>
+      <h2 class="dark-mode">TypeScript Game</h2>
+      <p class="dark-mode">
+        For more information, check out the links below
+      </p>
+
+      <a href="/game.html" target="_blank">Play a game written in TypeScript</a>
+    <!-- </div> -->
     </div>
   </div>
     

@@ -14,8 +14,9 @@ exports.hello = hello;
 * turns demo red
 */
 function turnRed() {
+    var _a;
     if (document != null) {
-        let c = document.getElementById("demo").style.color;
+        let c = (_a = document.getElementById("demo")) === null || _a === void 0 ? void 0 : _a.style.color;
         console.log(c);
         if (c === 'red') {
             document.getElementById("demo").style.color = "black";

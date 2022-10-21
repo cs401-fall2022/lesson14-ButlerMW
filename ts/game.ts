@@ -11,12 +11,12 @@
 */
 function turnRed() {
   if(document != null){
-      let c = document.getElementById("demo").style.color;
+      let c = document.getElementById("demo")?.style.color;
       console.log(c);
       if(c === 'red'){
-          document.getElementById("demo").style.color = "black";
+          document.getElementById("demo")!.style.color = "black";
       }else{
-          document.getElementById("demo").style.color = "red";
+          document.getElementById("demo")!.style.color = "red";
       }
   }    
 }
